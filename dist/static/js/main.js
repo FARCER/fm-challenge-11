@@ -1,0 +1,1 @@
+"use strict";function faq(){document.querySelector(".questions").addEventListener("click",function(t){(t.target.classList.contains("question__text")||t.target.classList.contains("question__header")||t.target.classList.contains("icon"))&&t.target.closest(".question").classList.toggle("open")})}svg4everybody(),faq();

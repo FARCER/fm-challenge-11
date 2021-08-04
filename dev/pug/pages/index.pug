@@ -1,0 +1,21 @@
+extends ../layouts/main
+
+block variables
+  -var title = 'Главная страница'
+
+block content
+  .faq
+    img(src='static/img/common/illustration-box-desktop.svg' alt='картинка').box
+    .images
+      img(src='static/img/common/illustration-woman-online-desktop.svg' alt='картинка').woman-desktop
+
+      img(src='static/img/common/illustration-woman-online-desktop.svg' alt='картинка').woman-mobile
+    .questions
+      span.title FAQ
+      each question in ['How many team members can I invite?','What is the maximum file upload size?','How do I reset my password?','Can I cancel my subscription?','Do you provide additional support?']
+        .question
+          .question__header
+            span.question__text=question
+            +icon('down-chevron')
+          .question__body
+            p No more than 2GB. All files in your account must fit your allotted storage space.
